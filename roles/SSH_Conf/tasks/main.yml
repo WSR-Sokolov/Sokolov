@@ -1,10 +1,10 @@
 ---
 - name: Delete old SSHD configuration
-          file: path=/etc/ssh/sshd_config state=absent
-- name: SSH Configuration
-  template:
-          src: sshd_config
-          dest: /etc/ssh/
+  command: mv ~/wsr-skillcloud/roles/SSH_Conf/config /etc/ssh/sshd_config
+  #- name: SSH Configuration
+  #  template:
+  #          src: sshd_config
+  #          dest: /etc/ssh/
 - name: Restart ssh
   service:
       name: ssh
