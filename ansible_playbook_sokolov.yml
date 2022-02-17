@@ -1,6 +1,6 @@
 ---
-- hosts: localhost 
 - name: InitAnsibleScript
+  hosts: all
   roles: 
   - updateVM
   - curl-install
