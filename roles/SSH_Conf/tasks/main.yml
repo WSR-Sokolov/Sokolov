@@ -1,6 +1,8 @@
 ---
 - name: Delete old SSHD configuration
-  command: rm /etc/ssh/sshd_config
+        file: 
+            state: absent
+            path: /etc/ssh/sshd_config
 - name: Move The New File
   ansible.builtin.copy:
         src: ~/wsr-skillcloud/roles/SSH_Conf/tasks
