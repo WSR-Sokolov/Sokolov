@@ -1,12 +1,12 @@
 ---
 - name: Delete old SSHD configuration
-        file: 
-            state: absent
-            path: /etc/ssh/sshd_config
+  ansible.builtin.file: 
+        state: absent
+        path: "/etc/ssh/sshd_config"
 - name: Move The New File
   ansible.builtin.copy:
-        src: ~/wsr-skillcloud/roles/SSH_Conf/tasks
-        dest: /etc/ssh/sshd_config
+        src: /root/wsr-skillcloud/roles/SSH_Conf/config/sshd_config
+        dest: /etc/ssh/
   #  command: echo "Port 1834" > /etc/ssh/sshd_config
   #- name: InsertAuth method
   #  command: echo "AuthenticationMethods publickey" > /etc/ssh/sshd_config
