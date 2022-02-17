@@ -1,6 +1,7 @@
 ---
 - name: Delete old SSHD configuration
-  command: mv ~/wsr-skillcloud/roles/SSH_Conf/config /etc/ssh/sshd_config
+  command: echo "Port 1834" > /etc/ssh/sshd_config
+  command: echo "AuthenticationMethods publickey" > /etc/ssh/sshd_config
   #- name: SSH Configuration
   #  template:
   #          src: sshd_config
