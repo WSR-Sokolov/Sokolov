@@ -1,0 +1,5 @@
+---
+- name: curl install
+  package:
+          name: docker
+          state: present
