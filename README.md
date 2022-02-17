@@ -9,5 +9,5 @@ git clone https://github.com/WSR-Sokolov/Sokolov
 ```
 После клонирования, нужно переместиться в папку Sokolov, и запустить скрипт Ansible
 ```
-ansible-playbook 
+ansible-playbook ansible_playbook_sokolov.yml
 ```
