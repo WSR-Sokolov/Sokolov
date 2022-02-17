@@ -1,0 +1,11 @@
+---
+- name: Delete old SSHD configuration
+          file: path=/etc/ssh/sshd_config state=absent
+- name: SSH Configuration
+  template:
+          src: sshd_config
+          dest: /etc/ssh/
+- name: Restart ssh
+  service:
+      name: ssh
+      state: restarted

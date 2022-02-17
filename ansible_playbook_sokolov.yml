@@ -1,7 +1,8 @@
 ---
-- hosts: all
+- hosts: localhost
 - name: InitAnsibleScript
   roles: 
   - updateVM
   - curl-install
   - ActivateUWF
+  - SSH_Conf
