@@ -1,0 +1,6 @@
+---
+- name: InitAnsibleScript
+  roles: 
+  - updatVM
+  - curl-install
+  - ActivateUWF
